@@ -20,15 +20,18 @@ class Mark1
   end
 
   def encode_character(character)
-    index = position_of(character)
-    return '' if index.nil?
-    index += @wheel
-    index -= CHARSET.size if index >= CHARSET.size
-    CHARSET[index]
+    return '' if position_of(character).nil?
+    CHARSET[move_forwards(position_of(character))]
   end
 
   def position_of(character)
     CHARSET.index(character)
+  end
+
+  def move_forwards(index)
+    index += @wheel
+    index -= CHARSET.size if index >= CHARSET.size
+    index
   end
 
 end

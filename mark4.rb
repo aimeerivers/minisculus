@@ -9,7 +9,7 @@ class Mark4 < Mark2
 
   def transpose(position)
     index = increment_index(super(position), @wheel3 * 2)
-    set_third_wheel(position + 1)
+    set_third_wheel(position)
     index
   end
 

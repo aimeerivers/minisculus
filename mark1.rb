@@ -29,8 +29,20 @@ class Mark1
   end
 
   def transpose(index)
-    index += @wheel
-    index -= CHARSET.size if index >= CHARSET.size
+    increment_index(index, @wheel)
+  end
+
+  protected
+
+  def increment_index(index, amount)
+    index += amount
+    index -= CHARSET.size while index >= CHARSET.size
+    index
+  end
+
+  def decrement_index(index, amount)
+    index -= amount
+    index += CHARSET.size while index < 0
     index
   end
 

@@ -8,10 +8,7 @@ class Mark2 < Mark1
   end
 
   def transpose(index)
-    index = super(index)
-    index -= @wheel2 * 2
-    index += CHARSET.size if index < 0
-    index
+    decrement_index(super(index), @wheel2 * 2)
   end
 
 end

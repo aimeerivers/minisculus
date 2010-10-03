@@ -8,11 +8,7 @@ class Mark4 < Mark2
   end
 
   def transpose(position)
-    index = super(position)
-    index += @wheel3 * 2
-    while index >= CHARSET.size
-      index -= CHARSET.size
-    end
+    index = increment_index(super(position), @wheel3 * 2)
     set_third_wheel(position + 1)
     index
   end

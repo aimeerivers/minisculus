@@ -9,8 +9,8 @@ class Mark2 < Mark1
 
   protected
 
-  def transpose(index)
-    decrement_index(super(index), @wheel2 * 2)
+  def encode_character(position)
+    decrement_index(super(position), @wheel2 * 2)
   end
 
 end

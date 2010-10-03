@@ -14,39 +14,36 @@ class Mark1
   end
 
   def encode(message)
-    message.chars.to_a.reduce('') do |result, character|
-      result += encode_character(character)
-    end
+    transform(message, :encode_character)
   end
 
   def decode(message)
-    message.chars.to_a.reduce('') do |result, character|
-      result += decode_character(character)
-    end
+    transform(message, :decode_character)
   end
 
   protected
 
-  def encode_character(character)
-    return '' if position_of(character).nil?
-    CHARSET[transpose(position_of(character))]
+  def transform(message, function)
+    message.chars.to_a.reduce('') do |result, character|
+      result + transform_character(character, function)
+    end
   end
 
-  def decode_character(character)
+  def transform_character(character, function)
     return '' if position_of(character).nil?
-    CHARSET[untranspose(position_of(character))]
+    CHARSET[self.send(function, position_of(character))]
+  end
+
+  def encode_character(position)
+    increment_index(position, @wheel)
+  end
+
+  def decode_character(position)
+    decrement_index(position, @wheel)
   end
 
   def position_of(character)
     CHARSET.index(character)
-  end
-
-  def transpose(index)
-    increment_index(index, @wheel)
-  end
-
-  def untranspose(index)
-    decrement_index(index, @wheel)
   end
 
   def increment_index(index, amount)

@@ -19,11 +19,22 @@ class Mark1
     end
   end
 
+  def decode(message)
+    message.chars.to_a.reduce('') do |result, character|
+      result += decode_character(character)
+    end
+  end
+
   protected
 
   def encode_character(character)
     return '' if position_of(character).nil?
     CHARSET[transpose(position_of(character))]
+  end
+
+  def decode_character(character)
+    return '' if position_of(character).nil?
+    CHARSET[untranspose(position_of(character))]
   end
 
   def position_of(character)
@@ -32,6 +43,10 @@ class Mark1
 
   def transpose(index)
     increment_index(index, @wheel)
+  end
+
+  def untranspose(index)
+    decrement_index(index, @wheel)
   end
 
   def increment_index(index, amount)

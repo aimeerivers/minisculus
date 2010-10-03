@@ -75,3 +75,31 @@ describe 'encoding a word' do
   end
 
 end
+
+describe 'decoding' do
+
+  let(:device) { Mark1.new(3) }
+
+  it 'converts def to abc' do
+    device.decode('def').should == 'abc'
+  end
+
+  it 'wraps around correctly' do
+    device.decode(' 23').should == '! 0'
+  end
+
+  it 'handles invalid characters without breaking' do
+    device.decode("$%^&").should == ''
+  end
+
+  it 'strips out invalid characters' do
+    device.decode("de&f").should == 'abc'
+  end
+
+  it 'is symmetrical to encoding' do
+    new_device = Mark1.new(9)
+    message = "Longer more fascinating message, to really test this thing's capabilities, YAY!"
+    new_device.decode(new_device.encode(message)).should == message
+  end
+
+end

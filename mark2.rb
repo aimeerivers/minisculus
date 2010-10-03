@@ -7,6 +7,8 @@ class Mark2 < Mark1
     @wheel2 = wheel2
   end
 
+  protected
+
   def transpose(index)
     decrement_index(super(index), @wheel2 * 2)
   end

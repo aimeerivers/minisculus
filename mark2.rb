@@ -13,4 +13,8 @@ class Mark2 < Mark1
     decrement_index(super(position), @wheel2 * 2)
   end
 
+  def decode_character(position)
+    super(increment_index(position, @wheel2 * 2))
+  end
+
 end

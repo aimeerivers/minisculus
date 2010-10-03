@@ -10,9 +10,11 @@ class Mark4 < Mark2
   protected
 
   def encode_character(position)
-    index = increment_index(super(position), @wheel3 * 2)
+    increment_index(super(position), @wheel3 * 2)
+  end
+
+  def after_encode_character(position)
     set_third_wheel(position)
-    index
   end
 
   private

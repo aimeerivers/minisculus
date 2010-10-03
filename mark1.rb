@@ -30,8 +30,11 @@ class Mark1
   end
 
   def transform_character(character, function)
-    return '' if position_of(character).nil?
-    CHARSET[self.send(function, position_of(character))]
+    position = position_of(character)
+    return '' if position.nil?
+    result = CHARSET[self.send(function, position)]
+    self.send(:"after_#{function}", position)
+    result
   end
 
   def encode_character(position)
@@ -41,6 +44,9 @@ class Mark1
   def decode_character(position)
     decrement_index(position, @wheel)
   end
+
+  def after_encode_character(position); end
+  def after_decode_character(position); end
 
   def position_of(character)
     CHARSET.index(character)

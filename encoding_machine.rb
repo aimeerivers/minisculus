@@ -20,6 +20,7 @@ class EncodingMachine
   protected
 
   def transform(message, function)
+    reset_encoder
     message.chars.to_a.reduce('') do |result, character|
       result + transform_character(character, function)
     end
@@ -29,7 +30,7 @@ class EncodingMachine
     position = position_of(character)
     return '' if position.nil?
     result = CHARSET[self.send(function, position)]
-    self.send(:"after_#{function}", position)
+    self.send(:"after_#{function}", position, result)
     result
   end
 
@@ -41,8 +42,9 @@ class EncodingMachine
     position
   end
 
-  def after_encode_character(position); end
-  def after_decode_character(position); end
+  def reset_encoder; end
+  def after_encode_character(position, result); end
+  def after_decode_character(position, result); end
 
   def position_of(character)
     CHARSET.index(character)

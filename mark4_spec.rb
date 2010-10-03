@@ -55,4 +55,17 @@ describe Mark4 do
     Mark4.new(4,5).encode('" ').should == 'zw'
   end
 
+  it 'resets the machine in between encodings' do
+    device = Mark4.new(3,9)
+    device.encode('abc').should == device.encode('abc')
+  end
+
+  context 'decoding' do
+    it 'correctly encodes and decodes a message' do
+      message = "Anything at all! Just try it, it's not going to do any harm, is it?!"
+      device = Mark4.new(5,9)
+      device.decode(device.encode(message)).should == message
+    end
+  end
+
 end

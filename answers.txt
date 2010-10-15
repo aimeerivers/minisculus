@@ -1,0 +1,55 @@
+Challenge 1
+
+http://minisculus.edendevelopment.co.uk/questions/14f7ca5f6ff1a5afb9032aa5e533ad95.html
+
+Encode the words 'Strong NE Winds!' using your virtual MARK I device set at wheel position 6.
+
+http://minisculus.edendevelopment.co.uk/14f7ca5f6ff1a5afb9032aa5e533ad95
+{"answer": "Yzxutm5TK5cotjy2"}
+
+
+
+Challenge 2
+
+http://minisculus.edendevelopment.co.uk/questions/2077f244def8a70e5ea758bd8352fcd8.html
+
+Using the wheel settings of 9,3 what would the encoded message be for the input 'The Desert Fox will move 30 tanks to Calais at dawn'?
+
+http://minisculus.edendevelopment.co.uk/2077f244def8a70e5ea758bd8352fcd8
+{"answer": "Wkh2Ghvhuw2Ir.2zloo2pryh2632wdqnv2wr2Fdodlv2dw2gdzq"}
+
+
+
+Challenge 3
+
+http://minisculus.edendevelopment.co.uk/questions/36d80eb0c50b49a509b49f2424e8c805.html
+
+{"reference-url":"/questions/36d80eb0c50b49a509b49f2424e8c805.html","question":"The white cliffs of Alghero are visible at night"}
+
+Using the first two wheel positions of 4,7 and an input message of 'The white cliffs of Alghero are visible at night', given the new 3rd variable wheel, what is the resulting output?
+
+http://minisculus.edendevelopment.co.uk/36d80eb0c50b49a509b49f2424e8c805
+{"answer": "JMl0kBp?20QixoivSc.2\"vvmls8KOk\"0jA,4kgt0OmUb,pm."}
+
+
+
+Challenge 4
+
+http://minisculus.edendevelopment.co.uk/questions/4baecf8ca3f98dc13eeecbac263cd3ed.html
+
+{"reference-url":"/questions/4baecf8ca3f98dc13eeecbac263cd3ed.html","question":"WZyDsL3u'0TfxP06RtSSF 'DbzhdyFIAu2 zF f5KE\"SOQTNA8A\"NCKPOKG5D9GSQE'M86IGFMKE6'K4pEVPK!bv83I"}
+
+Given wheel positions of 7,2 and an encrypted message found in the JSON question, what is the resulting message?
+
+http://minisculus.edendevelopment.co.uk/4baecf8ca3f98dc13eeecbac263cd3ed
+{"answer": "The rockets will strike at coordinates 49.977984 7.9257857 422979.83 5536735.81 on Oct. 7th"}
+
+
+
+Challenge 5
+
+http://minisculus.edendevelopment.co.uk/finish/50763edaa9d9bd2a9516280e9044d885.html
+
+{"code":"QT4e8MJYVhkls.27BL9,.MSqYSi'IUpAJKWg9Ul9p4o8oUoGy'ITd4d0AJVsLQp4kKJB2rz4dxfahwUa\"Wa.MS!k4hs2yY3k8ymnla.MOTxJ6wBM7sC0srXmyAAMl9t\"Wk4hs2yYTtH0vwUZp4a\"WhB2u,o6.!8Zt\"Wf,,eh5tk8WXv9UoM99w2Vr4!.xqA,5MSpWl9p4kJ2oUg'6evkEiQhC'd5d4k0qA'24nEqhtAQmy37il9p4o8vdoVr!xWSkEDn?,iZpw24kF\"fhGJZMI8nkI","email":"minisculus@edendevelopment.co.uk","reference-url":"/finish/50763edaa9d9bd2a9516280e9044d885.html"}
+
+
